@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+--DarkBlue: hsl(233, 26%, 24%);
+--LimeGreen: hsl(136, 65%, 51%);
+--BrightCyan: hsl(192, 70%, 51%);
+--GrayishBlue: hsl(233, 8%, 62%);
+--LightGrayishBlue: hsl(220, 16%, 96%);
+--VeryLightGray: hsl(0, 0%, 98%);
+--White: hsl(0, 0%, 100%);
+--bg: ;
+
+}
+
+*{
+  box-sizing: border-box
+}
+
+
+@layer utilities{
+  
+
+  .ham-menu {
+    @apply h-[30px] w-[30px] ml-auto relative z-[4] hover:cursor-pointer lg:hidden;
+  }
+  .ham-menu span {
+    @apply h-[2px] w-[100%]  bg-darkBlue rounded-3xl absolute top-1/2  -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-in-out;
+  }
+  .ham-menu span:nth-child(1) {
+    @apply top-1/4;
+  }
+  .ham-menu span:nth-child(3) {
+    @apply top-[75%];
+  }
+  .ham-menu.active2 span {
+    @apply bg-darkBlue;
+  }
+  .ham-menu.active2 span:nth-child(1) {
+    @apply top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45;
+  }
+  .ham-menu.active2 span:nth-child(2) {
+    @apply opacity-0;
+  }
+  .ham-menu.active2 span:nth-child(3) {
+    @apply -rotate-45 top-1/2  -translate-x-1/2 -translate-y-1/2 ;
+  }
+    
+
+     
+  .nav-list{
+    @apply text-center sm:overflow-x-hidden h-auto w-[90%] bg-White  top-24  right-[100%] absolute text-3 py-5 transition-all duration-500 ease-in-out rounded-md lg:relative lg:right-0 lg:bg-none lg:py-0 lg:top-0 lg:flex items-center lg:w-auto  ;
+  }
+  
+  .nav-list.active2 {
+    @apply absolute right-[5%] shadow-3xl ;
+    
+  }
+
+  .section-2-header{
+    @apply text-darkBlue text-4 mb-4 leading-none;
+  }
+
+  .section-2-para{
+    @apply text-GrayishBlue text-2 font-normal sm:text-3 lg:max-w-[70%] 2xl:max-w-[100%] 3xl:max-w-[90%];
+  }
+
+  .section-2-img{
+    @apply pb-5 m-auto lg:m-0;
+  }
+
+  .section-3-article{
+    @apply w-[85%] m-auto lg:max-w-[80%]
+  }
+
+  .section-3-img{
+    @apply rounded-t-md mb-7 w-full lg:max-w-[95%] lg:h-[300px] 2xl:h-[250px] 3xl:w-full
+  }
+
+  .name{
+    @apply text-1 text-GrayishBlue mb-3 
+  }
+
+  .title{
+    @apply text-3 text-darkBlue mb-3 hover:text-LimeGreen hover:cursor-pointer transition-all duration-300 ease-in-out sm:text-4
+  }
+
+  .section-3-para{
+    @apply text-GrayishBlue text-2 sm:text-3
+  }
+
+  .icon{
+    @apply text-4  text-White transition-all duration-300 ease-in-out hover:text-LimeGreen hover:cursor-pointer 
+  }
+}
+
+
